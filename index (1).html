@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>CV Sang Trọng - Tiến Kiệt</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --main-color: #b39ddb;       /* Tím nhạt ánh kim */
+      --highlight: #f8bbd0;        /* Hồng champagne sáng */
+      --bg-dark: #23213d;          /* Tím than sang trọng */
+      --accent: #fffde4;           /* Trắng ngọc trai */
+      --text-color: #f3f3f4;       /* Trắng xám ngọc trai */
+      --shadow: 0 8px 32px rgba(35,33,61,0.14);
+    }
+    body {
+      background: linear-gradient(135deg, var(--main-color) 0%, var(--bg-dark) 60%, var(--accent) 100%);
+      font-family: 'Montserrat', Arial, sans-serif;
+      color: var(--text-color);
+      margin: 0;
+      min-height: 100vh;
+      letter-spacing: 1px;
+    }
+    .cv-container {
+      max-width: 750px;
+      margin: 48px auto;
+      background: rgba(35,33,61,0.97);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 48px 38px 36px 38px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--main-color);
+    }
+    .cv-header {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      margin-bottom: 34px;
+    }
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 5px solid var(--highlight);
+      box-shadow: 0 0 0 10px var(--main-color);
+      background-image: url('https://i.ibb.co/ksctBWZF/7b2d5081-7c1d-4ddc-96b3-2e6c6f6cec1e.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .cv-title {
+      font-family: 'Orbitron', monospace;
+      font-size: 2.7em;
+      font-weight: bold;
+      color: var(--main-color);
+      text-shadow: 2px 2px var(--highlight);
+      margin: 0;
+      letter-spacing: 4px;
+    }
+    .cv-contact {
+      margin-top: 14px;
+      font-size: 1.13em;
+      color: var(--highlight);
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .section-title {
+      font-size: 1.32em;
+      font-weight: bold;
+      color: var(--highlight);
+      margin-bottom: 12px;
+      border-left: 7px solid var(--main-color);
+      padding-left: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      background: linear-gradient(90deg, var(--highlight) 50%, transparent 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .section-content {
+      background: rgba(243,243,244,0.07);
+      border-radius: 14px;
+      padding: 18px 22px;
+      box-shadow: 0 4px 18px rgba(179,157,219,0.07);
+    }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 11px;
+    }
+    .skill {
+      background: linear-gradient(135deg, var(--main-color), var(--highlight));
+      color: var(--bg-dark);
+      border-radius: 14px;
+      padding: 9px 20px;
+      font-weight: bold;
+      font-size: 1em;
+      box-shadow: 0 2px 10px rgba(179,157,219,0.14);
+      letter-spacing: 1px;
+      border: 1px solid var(--highlight);
+      transition: background 0.2s, color 0.2s;
+    }
+    .skill:hover {
+      background: var(--accent);
+      color: var(--main-color);
+      border: 1px solid var(--main-color);
+    }
+    .experiences {
+      list-style: none;
+      padding-left: 0;
+    }
+    .experiences li {
+      margin-bottom: 13px;
+      position: relative;
+      padding-left: 22px;
+    }
+    .experiences li:before {
+      content: "✨";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--highlight);
+      font-size: 1.15em;
+    }
+    .projects {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .project-card {
+      background: linear-gradient(135deg, var(--main-color) 20%, var(--accent) 100%);
+      border-left: 6px solid var(--highlight);
+      border-radius: 14px;
+      padding: 15px 20px;
+      flex: 1 1 46%;
+      min-width: 220px;
+      box-shadow: 0 2px 12px rgba(179,157,219,0.14);
+      color: var(--bg-dark);
+    }
+    .project-title {
+      font-weight: bold;
+      color: var(--bg-dark);
+      margin-bottom: 7px;
+      font-size: 1.08em;
+      letter-spacing: 1px;
+    }
+    .project-desc {
+      font-size: 1em;
+      color: #3c2c4f;
+      font-weight: 500;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 48px;
+      color: var(--main-color);
+      font-size: 1.03em;
+      opacity: 0.9;
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+    @media (max-width: 650px) {
+      .cv-container { padding: 20px 6px; }
+      .cv-header { flex-direction: column; align-items: flex-start; }
+      .projects { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="cv-container">
+    <div class="cv-header">
+      <div class="avatar"></div>
+      <div>
+        <h1 class="cv-title">Tiến Kiệt</h1>
+        <div class="cv-contact">
+          📧 example@gmail.com <br>
+          🌐 github.com/tienkiet <br>
+          📱 0123 456 789
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title">Giới thiệu</div>
+      <div class="section-content">
+        <em>
+          Tôi là một người yêu công nghệ, sáng tạo và luôn tìm kiếm sự mới mẻ trong từng dòng code. Độc đáo, linh hoạt và sẵn sàng bứt phá mọi giới hạn!
+        </em>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title">Kỹ năng</div>
+      <div class="section-content skills-list">
+        <span class="skill">Python</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">HTML/CSS</span>
+        <span class="skill">ReactJS</span>
+        <span class="skill">NodeJS</span>
+        <span class="skill">Git</span>
+        <span class="skill">Design UI/UX</span>
+        <span class="skill">Hackathon</span>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title">Kinh nghiệm</div>
+      <div class="section-content">
+        <ul class="experiences">
+          <li>Lập trình viên tự do, phát triển nhiều dự án cá nhân độc đáo.</li>
+          <li>Tham gia hackathon, nổi bật với giải pháp sáng tạo.</li>
+          <li>Thực tập sinh ở Công ty X, phát triển hệ thống quản lý thông minh.</li>
+          <li>Cộng tác viên thiết kế UI cho startup công nghệ.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title">Dự án nổi bật</div>
+      <div class="section-content projects">
+        <div class="project-card">
+          <div class="project-title">SpamSMS ✨</div>
+          <div class="project-desc">Ứng dụng gửi tin nhắn hàng loạt cực nhanh, giao diện tối giản mà chất.</div>
+        </div>
+        <div class="project-card">
+          <div class="project-title">Portfolio Sang Trọng</div>
+          <div class="project-desc">Website cá nhân với giao diện hiện đại, hiệu ứng chuyển động và màu sắc sang trọng.</div>
+        </div>
+        <div class="project-card">
+          <div class="project-title">Bot Discord Quản Lý</div>
+          <div class="project-desc">Bot hỗ trợ quản lý server Discord, nhắc việc và lưu trữ ý tưởng sáng tạo.</div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title">Sở thích</div>
+      <div class="section-content">
+        🎵 Nghe nhạc chill & lo-fi<br>
+        🎮 Chơi game trí tuệ<br>
+        🚀 Khám phá công nghệ mới<br>
+        🖌️ Thiết kế giao diện đẹp
+      </div>
+    </div>
+    <div class="footer">
+      Made with ✨ by Tiến Kiệt | Độc lạ - Sang trọng - Không trùng ai!
+    </div>
+  </div>
+</body>
+</html>
